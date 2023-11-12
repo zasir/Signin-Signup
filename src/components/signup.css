@@ -1,0 +1,131 @@
+.container{
+    display: flex;
+    position:relative;
+
+    flex-direction: row;
+    margin-top: 3vh;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    height: 85vh;
+   
+    border: 1px solid rgba(151, 150, 150, 0.473);
+    border-radius: 20px;
+    box-shadow: 0px  1px 10px rgba(128, 127, 127, 0.425);
+    
+}
+h2{
+    color: rgb(77, 77, 77);
+    margin-bottom: 15px;
+}
+.none{
+    display: none;
+}
+.create{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-top: 4vh;
+
+}
+
+.text{
+ 
+    font-size: 14px;
+    color: rgb(77, 77, 77);
+    
+}
+#terms{
+    color: rgb(141, 141, 141);
+    font-size: 13px;
+}
+#condition{
+    color:  rgb(141, 141, 141);
+    font-size: 8px;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn{
+    font-size: medium;
+margin-top: 10px;
+margin-bottom: 8px;
+height: 5vh;
+border-radius: 20px;
+font-weight: 600;
+border: none;
+padding: 0 3vw;
+color:white;
+background-color:rgb(255, 79, 167)
+}
+#checkbx{
+    height: 13px;
+}
+.dropdown{
+    width: 100%;
+}
+span{
+    color: red;
+}
+.inputInner{
+    margin-top: 2px;
+    width: 20vw;
+    height: 3vh;
+
+
+}
+.input{
+    margin-bottom: 7px;
+}
+h1{
+    margin: 1px auto;
+}
+p{
+    text-align: center;
+    margin: 1px auto;
+    color: rgb(77, 77, 77);
+
+}
+#loginbtn{
+    width: 60%;
+  
+}
+#forgetP{
+    color: rgb(49, 49, 49);
+    align-self:self-end;
+   font-size: 16px;
+   text-decoration: underline;
+}
+.removelogin{
+    
+    display:none
+}
+.login{
+    display: block;
+    position:absolute;
+    top: 30%;
+    right: 20%;
+}
+.welcome-hello{
+    width: 30%;
+    background-color: rgb(221, 218, 218);
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-hello-left{
+    position:absolute;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+
+}
+.logininput{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
