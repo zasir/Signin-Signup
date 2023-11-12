@@ -4,20 +4,33 @@ import { useState } from "react";
 
 function Signup() {
   const [addClass, setaddClass] = useState("");
-  function handleClick() {
+  const [savePass,setSavePass]=useState("")
+  const [passChk, setPassChk] = useState(true)
+  
+  function handleClick(e) {
+    e.preventDefault()
     let btnValue = document.querySelector("#welcome-hello-btn");
     btnValue.innerText === "LOGIN" ? setaddClass("toggle") : setaddClass("");
     
   }
+  function handleOnchangePass(e){
+    setSavePass(e.target.value)
+  }
+  function handleOnchangeCfmPass(e){
+    if((savePass) !== (e.target.value)){
+      setPassChk(false)
+    }else{
+      setPassChk(true)
+
+    }
+  }
+
   return (
     <div className="container">
       <div className={addClass === "toggle" ? "none" : "create"}>
         <h2>Create an account</h2>
         <div className="inputContainer">
-          <form onSubmit={(e)=>{
-            e.preventDefault()
-
-            handleClick()}}>
+          <form onSubmit={handleClick}>
             <div className="input">
               <label htmlFor="name" className="text">
                 Full Name<span>*</span>
@@ -81,6 +94,7 @@ function Signup() {
               </label>
               <br />
               <input
+              onChange={handleOnchangePass}
               required
                 type="password"
                 id="Password"
@@ -94,11 +108,13 @@ function Signup() {
               </label>
               <br />
               <input
+              onChange={handleOnchangeCfmPass}
               required
                 type="password"
                 id="ConfirmP"
                 className="inputInner"
               ></input>
+              {passChk ?  (<div></div>) : (<span id="cfmPass">Password Not Matching</span>)}
             </div>
             <div className="bottom">
               <span id="terms">
@@ -161,9 +177,7 @@ function Signup() {
         <button
           className="btn "
           id="welcome-hello-btn"
-          onClick={() => {
-            handleClick();
-          }}
+          onClick={handleClick}
         >
           {addClass === "toggle" ? "CREATE ACCOUNT" : "LOGIN"}
         </button>
