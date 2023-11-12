@@ -1,6 +1,12 @@
 import "./signup.css";
 import { useState } from "react";
-
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Navigate,
+// } from "react-router-dom";
+// import Dashboard from "./dashboard/dashboard";
 
 function Signup() {
   const [addClass, setaddClass] = useState("");
@@ -25,6 +31,10 @@ function Signup() {
     }
   }
 
+  // function handleLogin(){
+  //   console.log("ok")
+  
+  // }
   return (
     <div className="container">
       <div className={addClass === "toggle" ? "none" : "create"}>
@@ -154,7 +164,7 @@ function Signup() {
             <input type="password" id="Password" className="inputInner"></input>
           </div>
           <span id="forgetP">Forgot Password?</span>
-          <button id="loginbtn" className="btn">
+          <button id="loginbtn" className="btn" onClick={handleLogin}>
             LOGIN
           </button>
         </div>
@@ -174,13 +184,25 @@ function Signup() {
         ) : (
           <p>Step back into a world of organized tasks and clear goals</p>
         )}
-        <button
+        {/* <button
           className="btn "
           id="welcome-hello-btn"
           onClick={handleClick}
         >
           {addClass === "toggle" ? "CREATE ACCOUNT" : "LOGIN"}
-        </button>
+        </button> */}
+          {/* <Router>
+          <Routes> */}
+        {/* This route is for home component 
+with exact path "/", in component props 
+we passes the imported component*/}
+        {/* <Route
+            exact
+            path="/"
+            element={<Dashboard />}
+        />
+            </Routes>
+            </Router> */}
       </div>
     </div>
   );
